@@ -38,7 +38,7 @@ function viewCart() {
 }
 
 function total() {
-  let total = 0
+  let total = 10
   for(let i=0; i<cart.length; i++){
     total += parseInt(cart[i].itemPrice)
   }
