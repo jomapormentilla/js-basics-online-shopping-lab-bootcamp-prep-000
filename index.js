@@ -61,7 +61,6 @@ function placeOrder(cardNumber) {
   }else{
     cart = []
     let card = cardNumber
-    let string = `Your total cost is $${total()}, which will be charged to the card ${card}.`
+    return `Your total cost is $${total()}, which will be charged to the card ${card}.`
   }
-  return string
 }
