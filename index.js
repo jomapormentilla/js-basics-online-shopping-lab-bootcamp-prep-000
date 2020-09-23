@@ -38,9 +38,9 @@ function viewCart() {
 }
 
 function total() {
-  let total = 10
+  let total = 0
   for(let i=0; i<cart.length; i++){
-    total += parseInt(cart[i].itemPrice)
+    total += cart[i].itemPrice
   }
   return total
 }
@@ -61,7 +61,7 @@ function placeOrder(cardNumber) {
   }else{
     cart = []
     let card = cardNumber
-    let string = `Your total cost is $${total()}, which will be charged to the card ${card}.`
+    let string = `Your total cost is $${total()()}, which will be charged to the card ${card}.`
     return string
   }
 }
