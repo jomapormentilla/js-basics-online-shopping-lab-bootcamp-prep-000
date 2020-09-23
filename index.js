@@ -26,8 +26,12 @@ function viewCart() {
     return `Your shopping cart is empty.`
   }else{
     let string = `In your cart, you have `
-    for( let i=0; i<cart.length; i++ ){
-      string += `${ i===cart.length - 1 ? 'and ' : ''}${cart.itemName} at $${cart.itemPrice}${ i===cart.length - 1 ? '.' : ','}`
+    if(cart.length === 1){
+      string += `${cart[0].itemName} at ${cart[0].itemPrice}`
+    }else{
+      for(let i=0; i<cart.length; i++){
+        string += `${ i===cart.length ? 'and ' : ''}${cart[i].itemName} at ${cart[i].itemPrice}${ i === cart.length ? '.' : ', '}` 
+      }
     }
     return string
   }
