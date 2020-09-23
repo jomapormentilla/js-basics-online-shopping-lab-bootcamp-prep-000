@@ -60,7 +60,7 @@ function placeOrder(cardNumber) {
     return `Sorry, we don't have a credit card on file for you.`
   }else{
     cart = []
-    let myTotal = parseInt(total())
+    let myTotal = parseInt(this.total())
     let card = cardNumber
     let string = `Your total cost is $${myTotal}, which will be charged to the card ${card}.`
     return string
