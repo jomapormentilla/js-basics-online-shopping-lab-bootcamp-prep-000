@@ -23,7 +23,7 @@ function addToCart(item) {
 
 function viewCart() {
   if(cart.length === 0){
-    return `Your shopping cart is empty`
+    return `Your shopping cart is empty.`
   }else{
     let string = `In your cart, you have `
     for( let i=0; i<cart.length; i++ ){
