@@ -38,7 +38,7 @@ function viewCart() {
 }
 
 function total() {
-  var total = 0
+  let total = 0
   for(let i=0; i<cart.length; i++){
     total += cart[i].itemPrice
   }
@@ -56,7 +56,6 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  let total = total()
   if( cardNumber === undefined ){
     return `Sorry, we don't have a credit card on file for you.`
   }else{
