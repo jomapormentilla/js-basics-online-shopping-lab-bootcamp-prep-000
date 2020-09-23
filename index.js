@@ -30,7 +30,7 @@ function viewCart() {
       string += `${cart[0].itemName} at $${cart[0].itemPrice}.`
     }else{
       for(let i=0; i<cart.length; i++){
-        string += `${ i===cart.length ? 'and ' : ''}${cart[i].itemName} at $${cart[i].itemPrice}${ i === cart.length ? '.' : ', '}` 
+        string += `${ i===cart.length - 1 ? 'and ' : ''}${cart[i].itemName} at $${cart[i].itemPrice}${ i === cart.length - 1 ? '.' : ', '}` 
       }
     }
     return string
