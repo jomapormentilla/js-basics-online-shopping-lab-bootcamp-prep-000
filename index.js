@@ -55,13 +55,14 @@ function removeFromCart(item) {
   return `That item is not in your cart.`
 }
 
+const total = total()
 function placeOrder(cardNumber) {
   if( cardNumber === null ){
     return `Sorry, we don't have a credit card on file for you.`
   }else{
     cart = []
     let card = cardNumber
-    let string = `Your total cost is $${total()}, which will be charged to card ${card}.`
+    let string = `Your total cost is $${total}, which will be charged to the card ${card}.`
     return string
   }
 }
