@@ -42,7 +42,6 @@ function total() {
   for(let i=0; i<cart.length; i++){
     total += cart[i].itemPrice
   }
-  console.log(`TOTAL = ${total}`)
   return total
 }
 
@@ -61,9 +60,8 @@ function placeOrder(cardNumber) {
     return `Sorry, we don't have a credit card on file for you.`
   }else{
     cart = []
-    var myTotal = total()
     let card = cardNumber
-    let string = `Your total cost is $${myTotal}, which will be charged to the card ${card}.`
+    let string = `Your total cost is $${total()}, which will be charged to the card ${card}.`
     return string
   }
 }
